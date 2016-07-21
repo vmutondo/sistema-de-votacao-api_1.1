@@ -21,16 +21,6 @@ $read_write = [
     'update'
   ]
 ];
-Route::get('/',function(){
-    $cursos = DB::table('visitantes')->get();
-    print_r($cursos);
-});
-/*Route::get('/',function(){
- DB::table('cursos')->insert(
-     ['id'=>'3', 'nome'=>'civil', 'created_at'=>'2016-07-19 02:00:00', 'updated_at'=>'2016-07-19 03:00:00']
- );
-});*/
-
 
 Route::resource('departamentos','DepartamentoController', $read_write);
 
